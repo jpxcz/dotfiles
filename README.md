@@ -6,7 +6,7 @@ $ git clone git@github.com:jpxcz/dotfiles.git ~/dotfiles
 ```
 
 ## Dependencies
-[GIT](https://git-scm.com/)
+[GIT](https://git-scm.com/)  
 [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
 
 ## Folders
