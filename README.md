@@ -2,14 +2,24 @@
 
 ## Installation
 ```sh
-$ git clone git@github.com:jpxcz/.dotfiles.git ~/.dotfiles
+$ git clone git@github.com:jpxcz/dotfiles.git ~/dotfiles
 ```
 
 ## Dependencies
+[GIT](https://git-scm.com/)  
 [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
 
-## Symlinks
+## Folders
+```sh 
+$ ./folders.sh
+```
+
+## Config files
 ```sh
-$ ln -s $HOME/.dotfiles/.tmux.conf $HOME/.tmux.conf
-$ ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
+$ ./link.sh
+```
+
+## Arch Linux dependencies installation
+```sh
+$ sudo ./arch.sh -i
 ```
