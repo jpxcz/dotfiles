@@ -16,8 +16,14 @@ install() {
     yay -S --needed - < ./arch/yay.txt
 }
 
+post_install() {
+    echo "Installing post installation scripts..."
+    ./arch/security.sh
+    ./arch/docker.sh
+}
+
 if [[ $# -ne 1 ]]; then
-    echo "Usage: $0 [-b | -i]"
+    echo "Usage: $0 [-b | -i | -p]"
     exit 1
 fi
 
@@ -28,6 +34,9 @@ case "$1" in
         ;;
     -i)
         install
+        ;;
+    -p)
+        post_install
         ;;
     *)
         echo "❌ Invalid option: $1"
