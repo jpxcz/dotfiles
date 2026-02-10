@@ -4,12 +4,8 @@ vim.g.mapleader = " "
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
--- remove hightlight of searched world
+-- remove highlight of searched world
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
-
--- copy/paste
--- vim.keymap.set("n", "d", '"_d')
--- vim.keymap.set("v", "d", '"_d')
 
 -- diagnostic float text
 vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float)
@@ -39,3 +35,6 @@ vim.opt.scrolloff = 8
 vim.opt.smarttab = true
 vim.opt.smartindent = true
 vim.opt.splitright = true
+vim.diagnostic.config({
+        virtual_text = true,
+})
