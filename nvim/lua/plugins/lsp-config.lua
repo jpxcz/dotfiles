@@ -32,7 +32,7 @@ return {
 		"neovim/nvim-lspconfig",
 		lazy = false,
 		config = function()
-			local capabilities = require("cmp_nvim_lsp").default_capabilities()
+			local capabilities = vim.lsp.protocol.make_client_capabilities()
 			local servers = {
 				ts_ls = {},
 				html = {},
@@ -41,13 +41,11 @@ return {
 				cssls = {},
 				terraformls = {},
 				groovyls = {},
-
 				gopls = {
 					cmd = { "gopls" },
 					filetypes = { "go", "gomod", "gowork", "gotmpl" },
 					root_dir = vim.fs.root(0, { "go.mod", "go.work", ".git" }),
 				},
-
 				clangd = {
 					cmd = { "clangd", "--fallback-style=webkit" },
 				},
